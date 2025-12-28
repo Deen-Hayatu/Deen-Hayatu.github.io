@@ -1,35 +1,145 @@
-/* =========================
-   Print Styles (CV Export)
-   ========================= */
+/* Layout */
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
+/* Navigation */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+.dark .nav { background: #1f2937; }
+
+.nav-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+.btn {
+  border: 1px solid #d1d5db;
+  padding: .4rem .75rem;
+  border-radius: .375rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: white;
+}
+.dark .hero { background: #111827; }
+
+.hero-avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+.dark .hero-subtitle { color: #d1d5db; }
+
+.hero-text {
+  max-width: 48rem;
+  margin: 0 auto 2rem;
+  font-size: 1.125rem;
+}
+
+.hero-socials img {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 .5rem;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+@media (min-width: 768px) {
+  .section { padding: 6rem 0; }
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+.dark .card { background: #1f2937; }
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-meta {
+  font-size: .875rem;
+  color: #6b7280;
+  margin-bottom: .5rem;
+}
+
+.card-text {
+  color: #374151;
+}
+.dark .card-text { color: #d1d5db; }
+
+/* Skills */
+.skill-title {
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.skill-list li {
+  color: #4b5563;
+}
+
+/* Footer */
+.footer {
+  background: #1f2937;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Print */
 @media print {
-  nav,
-  #themeToggle,
-  footer {
-    display: none;
-  }
-
-  body {
-    background: white !important;
-    color: black !important;
-  }
-
-  .section {
-    padding: 2rem 0;
-  }
-
-  .card {
-    box-shadow: none;
-    border: 1px solid #e5e7eb;
-    page-break-inside: avoid;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-
-  h1, h2, h3 {
-    page-break-after: avoid;
-  }
+  nav, footer, #themeToggle { display: none; }
+  body { background: white; color: black; }
 }
