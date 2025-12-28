@@ -1,0 +1,35 @@
+/* =========================
+   Print Styles (CV Export)
+   ========================= */
+
+@media print {
+  nav,
+  #themeToggle,
+  footer {
+    display: none;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}
