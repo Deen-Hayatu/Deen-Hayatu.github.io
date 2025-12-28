@@ -1,67 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Mohammad Deen Hayatu | Software Engineer</title>
-  <meta name="description" content="Software engineer building full-stack web applications, APIs, and cloud-deployed systems.">
+  <meta name="description" content="Software engineer building full-stack systems, APIs, and cloud-deployed platforms." />
 
   <!-- Tailwind -->
+  <script>
+    tailwind = { darkMode: 'class' }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Custom Components -->
-  <link rel="stylesheet" href="assets/css/components.css">
-
-  <!-- Dark Mode Support -->
-  <script>
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
-    }
-  </script>
+  <!-- Components -->
+  <link rel="stylesheet" href="assets/css/components.css" />
 </head>
 
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
 
-<!-- ================= NAV ================= -->
-<nav class="bg-white dark:bg-gray-800 shadow">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <span class="font-bold text-lg">Deen Hayatu</span>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-logo">Deen Hayatu</span>
 
-    <div class="space-x-4 hidden md:block">
-      <a href="#projects" class="link">Projects</a>
-      <a href="#case-studies" class="link">Case Studies</a>
-      <a href="#skills" class="link">Skills</a>
-      <a href="#contact" class="link">Contact</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </div>
 
-    <button id="themeToggle" class="btn btn-primary text-sm">
-      Toggle Dark
-    </button>
+    <button id="themeToggle" class="btn">Dark</button>
   </div>
 </nav>
 
-<!-- ================= HERO ================= -->
-<header class="hero text-center">
+<!-- HERO -->
+<header class="hero">
+  <img
+    src="assets/images/profile.jpg"
+    alt="Mohammad Deen Hayatu"
+    class="hero-avatar"
+  />
+
   <h1 class="hero-title">Mohammad Deen Hayatu</h1>
   <p class="hero-subtitle">Software Engineer · Full-Stack Developer</p>
+
   <p class="hero-text">
-    I build scalable web applications, APIs, and cloud-deployed systems with a focus on clarity,
-    maintainability, and real-world impact.
+    I build scalable web applications, APIs, and cloud-deployed systems with a focus on
+    clarity, maintainability, and real-world impact.
   </p>
 
-  <div class="flex justify-center space-x-6">
-    <a href="https://github.com/Deen-Hayatu" class="link">GitHub</a>
-    <a href="https://www.linkedin.com/in/mohammad-deen-hayatu-895846156" class="link">LinkedIn</a>
+  <div class="hero-socials">
+    <a href="https://github.com/Deen-Hayatu">
+      <img src="assets/images/RG.jpg" alt="GitHub" />
+    </a>
+    <a href="https://www.linkedin.com/in/mohammad-deen-hayatu-895846156">
+      <img src="assets/images/linkedin.png" alt="LinkedIn" />
+    </a>
+    <a href="#">
+      <img src="assets/images/X.png" alt="X" />
+    </a>
   </div>
 </header>
 
-<!-- ================= PROJECTS ================= -->
+<!-- PROJECTS -->
 <section id="projects" class="section bg-gray-100 dark:bg-gray-800">
-  <div class="max-w-6xl mx-auto px-4">
+  <div class="container">
     <h2 class="section-title">Projects</h2>
 
     <div class="grid md:grid-cols-2 gap-8">
@@ -69,64 +73,46 @@
         <h3 class="card-title">GhEHR System</h3>
         <p class="card-meta">Node.js · AWS · REST APIs</p>
         <p class="card-text">
-          Cloud-deployed electronic health records system supporting clinical workflows and secure
-          patient data management.
+          Cloud-deployed electronic health records platform supporting clinical workflows
+          and secure patient data management.
         </p>
-        <a href="#" class="link">View project →</a>
       </div>
 
       <div class="card">
-        <h3 class="card-title">AgriConnect Platform</h3>
+        <h3 class="card-title">AgriConnect</h3>
         <p class="card-meta">React · Node.js · PostgreSQL</p>
         <p class="card-text">
-          Web platform supporting agricultural data management and digital services in West Africa.
+          Web platform enabling agricultural data management and digital services
+          for West African contexts.
         </p>
-        <a href="#" class="link">View project →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= CASE STUDIES ================= -->
-<section id="case-studies" class="section">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="section-title">Case Studies</h2>
-
-    <div class="card case-study">
-      <h3 class="case-study-title">Designing Real-World Systems</h3>
-      <p class="case-study-text">
-        Focus on scalable architecture, role-based access control, and maintainable backend design
-        in resource-constrained environments.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="section bg-gray-100 dark:bg-gray-800">
-  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-    <div class="skill-group">
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container grid md:grid-cols-3 gap-8">
+    <div>
       <h3 class="skill-title">Frontend</h3>
       <ul class="skill-list">
         <li>HTML, CSS, JavaScript</li>
         <li>React</li>
-        <li>Responsive UI</li>
       </ul>
     </div>
 
-    <div class="skill-group">
+    <div>
       <h3 class="skill-title">Backend</h3>
       <ul class="skill-list">
-        <li>Node.js, Express</li>
+        <li>Node.js</li>
         <li>REST APIs</li>
-        <li>Auth & Security</li>
       </ul>
     </div>
 
-    <div class="skill-group">
+    <div>
       <h3 class="skill-title">DevOps</h3>
       <ul class="skill-list">
-        <li>AWS (EC2, EB)</li>
+        <li>AWS</li>
         <li>Docker</li>
         <li>GitHub Actions</li>
       </ul>
@@ -134,26 +120,24 @@
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section text-center">
+<!-- CONTACT -->
+<section id="contact" class="section bg-gray-100 dark:bg-gray-800 text-center">
   <h2 class="section-title">Contact</h2>
-  <p>Email: <a href="mailto:your@email.com" class="link">your@email.com</a></p>
+  <p>
+    Email:
+    <a href="mailto:your@email.com" class="link">your@email.com</a>
+  </p>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="footer">
   © 2025 Mohammad Deen Hayatu
 </footer>
 
-<!-- ================= JS ================= -->
 <script>
-  const toggle = document.getElementById('themeToggle')
-  toggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark')
-    localStorage.theme = document.documentElement.classList.contains('dark')
-      ? 'dark'
-      : 'light'
-  })
+  const toggle = document.getElementById("themeToggle");
+  toggle.onclick = () => {
+    document.documentElement.classList.toggle("dark");
+  };
 </script>
 
 </body>
