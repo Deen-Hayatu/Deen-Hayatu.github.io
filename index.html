@@ -6,6 +6,17 @@
 
   <title>Mohammad Deen Hayatu | Software Engineer</title>
   <meta name="description" content="Software engineer building full-stack systems, APIs, and cloud-deployed platforms." />
+  <meta name="author" content="Mohammad Deen Hayatu" />
+  <meta name="keywords" content="software engineer, full-stack developer, AI engineer, RAG, Node.js, React, AWS" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohammad Deen Hayatu | Software Engineer" />
+  <meta property="og:description" content="Software engineer building full-stack systems, APIs, and cloud-deployed platforms." />
+  <meta property="og:url" content="https://deen-hayatu.github.io" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
 
   <!-- Tailwind -->
   <script>
@@ -24,13 +35,37 @@
   <div class="nav-inner">
     <span class="nav-logo">Mohammad Deen Hayatu</span>
 
-    <div class="nav-links">
+    <!-- Desktop Navigation -->
+    <div class="nav-links desktop-nav">
+      <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </div>
 
-    <button id="themeToggle" class="btn">Dark</button>
+    <div class="flex items-center gap-3">
+      <button id="themeToggle" class="btn" aria-label="Toggle dark mode">
+        <span id="themeText">Dark</span>
+      </button>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-btn btn md:hidden" aria-label="Toggle mobile menu">
+        <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div id="mobileMenu" class="mobile-nav hidden">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
   </div>
 </nav>
 
@@ -38,54 +73,253 @@
 <header class="hero">
   <img
     src="assets/images/profile.jpg"
-    alt="Mohammad Deen Hayatu"
+    alt="Profile photo of Mohammad Deen Hayatu"
     class="hero-avatar"
   />
 
   <h1 class="hero-title">Mohammad Deen Hayatu</h1>
-  <p class="hero-subtitle">Software Engineer · Full-Stack Developer . AI/RAG Engineer </p>
+  <p class="hero-subtitle">Software Engineer · Full-Stack Developer · AI/RAG Engineer</p>
 
   <p class="hero-text">
     I build scalable web applications, APIs, AI/RAG and cloud-deployed systems with a focus on
-    clarity, maintainability, scalability  and real-world impact.
+    clarity, maintainability, scalability and real-world impact.
   </p>
 
   <div class="hero-socials">
-    <a href="https://github.com/Deen-Hayatu">
-      <img src="assets/images/RG.jpg" alt="GitHub" />
+    <a href="https://github.com/Deen-Hayatu" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+      <img src="assets/images/RG.jpg" alt="GitHub logo" />
     </a>
-    <a href="https://www.linkedin.com/in/mohammad-deen-hayatu-895846156">
-      <img src="assets/images/linkedin.png" alt="LinkedIn" />
+    <a href="https://www.linkedin.com/in/mohammad-deen-hayatu-895846156" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+      <img src="assets/images/linkedin.png" alt="LinkedIn logo" />
     </a>
-    <a href="#">
-      <img src="assets/images/X.png" alt="X" />
+    <a href="https://twitter.com/Deen_Hayatu" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile">
+      <img src="assets/images/X.png" alt="X (Twitter) logo" />
+    </a>
+  </div>
+
+  <!-- Download Resume Button -->
+  <div class="mt-6">
+    <a 
+      href="assets/resume.pdf" 
+      download="Mohammad_Deen_Hayatu_Resume.pdf"
+      class="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl"
+    >
+      📄 Download Resume
     </a>
   </div>
 </header>
+
+<!-- ABOUT / EXPERIENCE -->
+<section id="about" class="section bg-white dark:bg-gray-900">
+  <div class="container max-w-4xl">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="space-y-6 text-lg leading-relaxed">
+      <p class="card-text">
+        I'm a software engineer with a unique background in scientific research that informs 
+        my disciplined, systems-level approach to building production-oriented software. 
+        My work focuses on creating scalable solutions that address real-world challenges, 
+        particularly in West African contexts.
+      </p>
+      
+      <p class="card-text">
+        I specialize in full-stack development, AI/RAG systems, and cloud infrastructure. 
+        My recent projects demonstrate expertise in building healthcare platforms, agricultural 
+        technology solutions, and AI-powered tools using cutting-edge technologies while 
+        prioritizing privacy and local-first approaches.
+      </p>
+
+      <div class="mt-8">
+        <h3 class="text-2xl font-bold mb-4">Experience & Background</h3>
+        
+        <div class="space-y-6">
+          <!-- Founder -->
+          <div class="card">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="card-title">Founder & Lead Developer</h4>
+              <span class="card-meta">Jan 2025 - Present</span>
+            </div>
+            <p class="font-semibold text-blue-600 dark:text-blue-400 mb-2">Haydeen Technologies</p>
+            <p class="card-text">
+              Founded technology company delivering innovative software solutions for West African industries. 
+              Leading development of AgriConnect platform and providing website design services to organizations 
+              like MPCGhana.org. Focus on mobile-first, culturally appropriate design and industry-specific solutions.
+            </p>
+          </div>
+
+          <!-- Software Engineer -->
+          <div class="card">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="card-title">Software Engineer</h4>
+              <span class="card-meta">2023 - Present</span>
+            </div>
+            <p class="font-semibold text-blue-600 dark:text-blue-400 mb-2">Independent Projects</p>
+            <p class="card-text">
+              Developed comprehensive Electronic Health Records system (GhEHR) for Ghana healthcare facilities 
+              with AI-powered clinical notes. Built multiple AI/RAG systems using LangChain, Ollama, and Mistral 7B 
+              for document analysis, data visualization, and natural language SQL queries—all with privacy-first, 
+              local-first architecture.
+            </p>
+          </div>
+
+          <!-- Research Background -->
+          <div class="card">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="card-title">Scientific Research Background</h4>
+              <span class="card-meta">Prior Experience</span>
+            </div>
+            <p class="card-text">
+              Background in scientific research providing strong foundation in systematic problem-solving, 
+              data analysis, and rigorous methodology. This experience informs my engineering approach with 
+              emphasis on clear abstractions, maintainable code, and reliable technology choices.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <h3 class="text-2xl font-bold mb-4">Philosophy</h3>
+        <div class="card">
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <span class="text-blue-600 dark:text-blue-400 mr-2">✓</span>
+              <span class="card-text">Clear abstractions over clever code</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 dark:text-blue-400 mr-2">✓</span>
+              <span class="card-text">Boring, reliable technology that scales</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 dark:text-blue-400 mr-2">✓</span>
+              <span class="card-text">Code that is readable six months later</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 dark:text-blue-400 mr-2">✓</span>
+              <span class="card-text">Real-world impact over technical showboating</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- PROJECTS -->
 <section id="projects" class="section bg-gray-100 dark:bg-gray-800">
   <div class="container">
     <h2 class="section-title">Projects</h2>
 
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- GhEHR System -->
       <div class="card">
         <h3 class="card-title">GhEHR System</h3>
-        <p class="card-meta">Node.js · AWS · REST APIs</p>
+        <p class="card-meta">Node.js · React · TypeScript · AWS</p>
         <p class="card-text">
-          Cloud-deployed electronic health records platform supporting clinical workflows
-          and secure patient data management.
+          Comprehensive Electronic Health Records system for Ghana healthcare facilities 
+          with AI-powered clinical notes, offline capabilities, and real-time disease detection 
+          for malaria, typhoid, TB, and other common conditions.
         </p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/Deen-Hayatu/ghehr-system" target="_blank" rel="noopener noreferrer" class="link">
+            View on GitHub →
+          </a>
+          <a href="http://ghehr-production-v2.eba-nymf88yi.us-east-1.elasticbeanstalk.com" target="_blank" rel="noopener noreferrer" class="link">
+            Live Demo →
+          </a>
+        </div>
       </div>
 
+      <!-- Haydeen Portal -->
+      <div class="card">
+        <h3 class="card-title">Haydeen Technologies</h3>
+        <p class="card-meta">React · Node.js · PostgreSQL · Vercel</p>
+        <p class="card-text">
+          Digital platform delivering innovative software solutions and website design services 
+          for West African industries, featuring AgriConnect and industry-specific solutions 
+          with mobile-first, culturally authentic design.
+        </p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/Deen-Hayatu/HaydeenPortal" target="_blank" rel="noopener noreferrer" class="link">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+
+      <!-- RAG Document Summarizer -->
+      <div class="card">
+        <h3 class="card-title">RAG Document Summarizer</h3>
+        <p class="card-meta">Python · Mistral 7B · Ollama · ChromaDB</p>
+        <p class="card-text">
+          AI-powered document analysis system using Retrieval-Augmented Generation with local Mistral 7B. 
+          Features multi-format support (PDF, DOCX, TXT), semantic search, and interactive Q&A 
+          with complete privacy - all processing happens locally.
+        </p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/Deen-Hayatu/rag-document-summarizer" target="_blank" rel="noopener noreferrer" class="link">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+
+      <!-- Data Visual Agent -->
+      <div class="card">
+        <h3 class="card-title">Data Visual Agent</h3>
+        <p class="card-meta">Python · LangChain · Ollama · Natural Language</p>
+        <p class="card-text">
+          Transform datasets into beautiful visualizations using natural language queries. 
+          Supports CSV, Excel, JSON with automatic format detection, intelligent code generation, 
+          and publication-ready charts - completely local and private.
+        </p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/Deen-Hayatu/Data_visual_Agent" target="_blank" rel="noopener noreferrer" class="link">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+
+      <!-- Local SQL Agents -->
+      <div class="card">
+        <h3 class="card-title">Local SQL Agents</h3>
+        <p class="card-meta">Python · LangChain · Mistral 7B · MySQL</p>
+        <p class="card-text">
+          Natural language to SQL query converter using locally-hosted Mistral 7B via Ollama. 
+          Convert plain English questions into SQL commands with robust error handling, 
+          query validation, and complete data privacy.
+        </p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/Deen-Hayatu/Local_SQL_Agents" target="_blank" rel="noopener noreferrer" class="link">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+
+      <!-- AgriConnect -->
       <div class="card">
         <h3 class="card-title">AgriConnect</h3>
-        <p class="card-meta">React · Node.js · PostgreSQL</p>
+        <p class="card-meta">React · Node.js · PostgreSQL · Mobile-First</p>
         <p class="card-text">
-          Web platform enabling agricultural data management and digital services
-          for West African contexts.
+          Flagship agricultural platform connecting farmers, buyers, and suppliers across West Africa. 
+          Features real-time weather data, direct marketplace with fair pricing, supply chain tracking, 
+          and educational resources in local languages.
         </p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/Deen-Hayatu/agriconnect" target="_blank" rel="noopener noreferrer" class="link">
+            View on GitHub →
+          </a>
+        </div>
       </div>
+    </div>
+
+    <!-- View All Projects Button -->
+    <div class="text-center mt-8">
+      <a 
+        href="https://github.com/Deen-Hayatu?tab=repositories" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-block bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 dark:hover:bg-gray-300 transition-colors"
+      >
+        View All Projects on GitHub →
+      </a>
     </div>
   </div>
 </section>
@@ -105,18 +339,20 @@
       <h3 class="skill-title">Backend</h3>
       <ul class="skill-list">
         <li>Node.js</li>
+        <li>Python</li>
         <li>REST APIs</li>
+        <li>C</li>
       </ul>
     </div>
 
     <div>
-      <h3 class="skill-title">DevOps</h3>
+      <h3 class="skill-title">DevOps & Cloud</h3>
       <ul class="skill-list">
         <li>AWS</li>
         <li>Docker</li>
         <li>GitHub Actions</li>
       </ul>
-      <h3 class="skill-title">AI/RAG</h3>
+      <h3 class="skill-title mt-4">AI/RAG</h3>
       <ul class="skill-list">
         <li>Ollama</li>
         <li>HuggingFace</li>
@@ -132,10 +368,21 @@
 <!-- CONTACT -->
 <section id="contact" class="section bg-gray-100 dark:bg-gray-800 text-center">
   <h2 class="section-title">Contact</h2>
-  <p>
+  <p class="mb-6">
     Email:
     <a href="mailto:mohammaddeen.hayatu@haydeentechnologies.com" class="link">mohammaddeen.hayatu@haydeentechnologies.com</a>
   </p>
+  
+  <!-- Download Resume in Contact Section -->
+  <div class="mt-6">
+    <a 
+      href="assets/resume.pdf" 
+      download="Mohammad_Deen_Hayatu_Resume.pdf"
+      class="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl"
+    >
+      📄 Download Resume
+    </a>
+  </div>
 </section>
 
 <footer class="footer">
@@ -143,10 +390,71 @@
 </footer>
 
 <script>
+  // Theme persistence and toggle
   const toggle = document.getElementById("themeToggle");
+  const themeText = document.getElementById("themeText");
+  const html = document.documentElement;
+
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem("theme") || "light";
+  
+  // Apply the saved theme on page load
+  if (currentTheme === "dark") {
+    html.classList.add("dark");
+    themeText.textContent = "Light";
+  } else {
+    html.classList.remove("dark");
+    themeText.textContent = "Dark";
+  }
+
+  // Toggle theme on button click
   toggle.onclick = () => {
-    document.documentElement.classList.toggle("dark");
+    html.classList.toggle("dark");
+    
+    // Update button text and save preference
+    if (html.classList.contains("dark")) {
+      themeText.textContent = "Light";
+      localStorage.setItem("theme", "dark");
+    } else {
+      themeText.textContent = "Dark";
+      localStorage.setItem("theme", "light");
+    }
   };
+
+  // Mobile menu toggle
+  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const hamburgerIcon = document.getElementById("hamburgerIcon");
+  const closeIcon = document.getElementById("closeIcon");
+
+  mobileMenuToggle.onclick = () => {
+    mobileMenu.classList.toggle("hidden");
+    hamburgerIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+  };
+
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add("hidden");
+      hamburgerIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+    });
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
 </script>
 
 </body>

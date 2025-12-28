@@ -32,12 +32,73 @@
 .nav-links a {
   margin-left: 1.5rem;
   font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.dark .nav-links a:hover {
+  color: #60a5fa;
+}
+
+/* Desktop Navigation - Hidden on Mobile */
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: block;
+  }
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem 0;
+}
+
+.dark .mobile-nav {
+  background: #1f2937;
+  border-top-color: #374151;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.mobile-nav-link:hover {
+  background: #f3f4f6;
+}
+
+.dark .mobile-nav-link:hover {
+  background: #374151;
+}
+
+.mobile-menu-btn {
+  cursor: pointer;
 }
 
 .btn {
   border: 1px solid #d1d5db;
   padding: .4rem .75rem;
   border-radius: .375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background: #f3f4f6;
+}
+
+.dark .btn:hover {
+  background: #374151;
 }
 
 /* Hero */
@@ -101,8 +162,14 @@
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .dark .card { background: #1f2937; }
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
 
 .card-title {
   font-size: 1.25rem;
@@ -117,8 +184,29 @@
 
 .card-text {
   color: #374151;
+  margin-bottom: 1rem;
 }
 .dark .card-text { color: #d1d5db; }
+
+.link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.dark .link {
+  color: #60a5fa;
+}
+
+.dark .link:hover {
+  color: #93c5fd;
+}
 
 /* Skills */
 .skill-title {
