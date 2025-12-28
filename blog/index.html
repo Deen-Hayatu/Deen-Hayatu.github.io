@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta Tags -->
+  <title>Blog | Mohammad Deen Hayatu - Software Engineering & AI Insights</title>
+  <meta name="title" content="Blog | Mohammad Deen Hayatu - Software Engineering & AI Insights" />
+  <meta name="description" content="Technical articles on full-stack development, AI/RAG systems, healthcare technology, and agricultural tech solutions for Africa." />
+  <meta name="author" content="Mohammad Deen Hayatu" />
+  <meta name="keywords" content="software engineering blog, AI development, RAG systems, healthcare tech, agricultural technology, full-stack development, technical writing" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://deen-hayatu.github.io/blog/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://deen-hayatu.github.io/blog/" />
+  <meta property="og:title" content="Blog | Mohammad Deen Hayatu - Software Engineering & AI Insights" />
+  <meta property="og:description" content="Technical articles on full-stack development, AI/RAG systems, and building technology solutions for Africa." />
+  <meta property="og:image" content="https://deen-hayatu.github.io/assets/images/profile.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@Deen_Hayatu" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+
+  <!-- Tailwind -->
+  <script>
+    tailwind = { darkMode: 'class' }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Components -->
+  <link rel="preload" href="../assets/css/components.css" as="style" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Mohammad Deen Hayatu</a>
+
+    <!-- Desktop Navigation -->
+    <div class="nav-links desktop-nav">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="index.html" class="font-bold" style="color: #667eea;">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button id="themeToggle" class="btn" aria-label="Toggle dark mode">
+        <span id="themeText">Dark</span>
+      </button>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-btn btn md:hidden" aria-label="Toggle mobile menu">
+        <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div id="mobileMenu" class="mobile-nav hidden">
+    <a href="../index.html" class="mobile-nav-link">Home</a>
+    <a href="../index.html#about" class="mobile-nav-link">About</a>
+    <a href="../index.html#projects" class="mobile-nav-link">Projects</a>
+    <a href="index.html" class="mobile-nav-link font-bold">Blog</a>
+    <a href="../index.html#contact" class="mobile-nav-link">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero py-16">
+  <h1 class="hero-title text-4xl">Technical Blog</h1>
+  <p class="hero-subtitle mt-4">Insights on Software Engineering, AI Systems & African Tech Solutions</p>
+</header>
+
+<!-- BLOG POSTS -->
+<section class="section bg-white dark:bg-gray-900">
+  <div class="container max-w-5xl">
+    
+    <!-- Filter Tags -->
+    <div class="flex flex-wrap gap-3 mb-8">
+      <button class="px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 font-semibold text-sm hover:bg-purple-200 dark:hover:bg-purple-800 transition-colors">
+        All Posts
+      </button>
+      <button class="px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+        AI & RAG
+      </button>
+      <button class="px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+        Full-Stack Dev
+      </button>
+      <button class="px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+        Healthcare Tech
+      </button>
+      <button class="px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+        AgriTech
+      </button>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <div class="space-y-8">
+      
+      <!-- Sample Post 1 -->
+      <article class="card">
+        <div class="flex items-start gap-4">
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full text-xs font-semibold">AI & RAG</span>
+              <span class="text-sm text-gray-500 dark:text-gray-400">5 min read • Dec 28, 2025</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-3 hover:text-purple-600 dark:hover:text-teal-400 transition-colors">
+              <a href="building-local-rag-systems.html">Building Privacy-First RAG Systems with Local LLMs</a>
+            </h2>
+            <p class="card-text mb-4">
+              Learn how to build production-ready Retrieval-Augmented Generation systems using Ollama, Mistral 7B, and ChromaDB—all running locally to ensure complete data privacy. This guide covers architecture, implementation, and real-world use cases.
+            </p>
+            <div class="flex items-center gap-4 text-sm">
+              <span class="text-gray-600 dark:text-gray-400">🏷️ Ollama, LangChain, ChromaDB</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Post 2 -->
+      <article class="card">
+        <div class="flex items-start gap-4">
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300 rounded-full text-xs font-semibold">Healthcare Tech</span>
+              <span class="text-sm text-gray-500 dark:text-gray-400">8 min read • Dec 20, 2025</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-3 hover:text-purple-600 dark:hover:text-teal-400 transition-colors">
+              <a href="building-ehr-for-africa.html">Building Electronic Health Records for African Healthcare: Lessons from GhEHR</a>
+            </h2>
+            <p class="card-text mb-4">
+              A deep dive into the technical and cultural considerations when building healthcare software for African contexts. From offline-first architecture to local disease detection, here's what we learned building GhEHR.
+            </p>
+            <div class="flex items-center gap-4 text-sm">
+              <span class="text-gray-600 dark:text-gray-400">🏷️ React, Node.js, AWS, Healthcare</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Post 3 -->
+      <article class="card">
+        <div class="flex items-start gap-4">
+          <div class="flex-1">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">Full-Stack Dev</span>
+              <span class="text-sm text-gray-500 dark:text-gray-400">6 min read • Dec 15, 2025</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-3 hover:text-purple-600 dark:hover:text-teal-400 transition-colors">
+              <a href="scalable-node-api-patterns.html">Scalable Node.js API Patterns for Production</a>
+            </h2>
+            <p class="card-text mb-4">
+              From authentication strategies to database connection pooling, explore battle-tested patterns for building Node.js APIs that scale. Includes code examples and performance benchmarks.
+            </p>
+            <div class="flex items-center gap-4 text-sm">
+              <span class="text-gray-600 dark:text-gray-400">🏷️ Node.js, Express, PostgreSQL, Performance</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Coming Soon Placeholder -->
+      <div class="card border-2 border-dashed border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+        <div class="text-center py-8">
+          <div class="text-4xl mb-4">✍️</div>
+          <h3 class="text-xl font-semibold mb-2">More Articles Coming Soon</h3>
+          <p class="card-text">
+            Subscribe to my newsletter or follow me on <a href="https://twitter.com/Deen_Hayatu" class="link">Twitter/X</a> 
+            to get notified when new posts are published.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER SIGNUP -->
+<section class="section bg-gradient-to-br from-purple-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
+  <div class="container max-w-2xl text-center">
+    <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+    <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
+      Get notified when I publish new articles on software engineering, AI systems, and African tech.
+    </p>
+    <div class="flex gap-3 max-w-md mx-auto">
+      <input 
+        type="email" 
+        placeholder="Enter your email" 
+        class="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
+      />
+      <button class="gradient-btn">Subscribe</button>
+    </div>
+    <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  © 2025 Mohammad Deen Hayatu
+</footer>
+
+<script>
+  // Theme persistence and toggle
+  const toggle = document.getElementById("themeToggle");
+  const themeText = document.getElementById("themeText");
+  const html = document.documentElement;
+
+  const currentTheme = localStorage.getItem("theme") || "light";
+  
+  if (currentTheme === "dark") {
+    html.classList.add("dark");
+    themeText.textContent = "Light";
+  } else {
+    html.classList.remove("dark");
+    themeText.textContent = "Dark";
+  }
+
+  toggle.onclick = () => {
+    html.classList.toggle("dark");
+    
+    if (html.classList.contains("dark")) {
+      themeText.textContent = "Light";
+      localStorage.setItem("theme", "dark");
+    } else {
+      themeText.textContent = "Dark";
+      localStorage.setItem("theme", "light");
+    }
+  };
+
+  // Mobile menu toggle
+  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const hamburgerIcon = document.getElementById("hamburgerIcon");
+  const closeIcon = document.getElementById("closeIcon");
+
+  mobileMenuToggle.onclick = () => {
+    mobileMenu.classList.toggle("hidden");
+    hamburgerIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+  };
+
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add("hidden");
+      hamburgerIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+    });
+  });
+</script>
+
+</body>
+</html>
