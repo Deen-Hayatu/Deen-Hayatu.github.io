@@ -347,12 +347,13 @@
     </div>
     <p class="location">Remote</p>
     <ul>
-      <li>Developed comprehensive Electronic Health Records system (GhEHR) for Ghana healthcare facilities with AI-powered clinical notes, offline capabilities, and real-time disease detection for malaria, typhoid, and TB</li>
+      <li>Developed comprehensive Electronic Health Records system (GhEHR) for Ghana healthcare facilities with AI-powered clinical notes, offline capabilities, and real-time disease detection for malaria, typhoid, and TB — live in production at ghehrhealth.com</li>
+      <li>Built MedPal, an AI clinical decision-support platform grounded in the Ghana Standard Treatment Guidelines, using a retrieval-augmented generation pipeline on Amazon Bedrock with a deterministic safety layer and server-side PHI de-identification — live in production at medpal.ghehrhealth.com</li>
       <li>Built multiple AI/RAG systems using LangChain, Ollama, and Mistral 7B for document analysis, data visualization, and natural language SQL queries with privacy-first, local-first architecture</li>
       <li>Created RAG Document Summarizer with multi-format support (PDF, DOCX, TXT), semantic search, and interactive Q&A using ChromaDB vector database</li>
       <li>Engineered Data Visual Agent converting natural language queries into publication-ready charts with automatic format detection and intelligent code generation</li>
-      <li>Deployed production applications to AWS Elastic Beanstalk with Docker containerization and CI/CD pipelines</li>
-      <li>Technologies: Node.js, React, TypeScript, Python, PostgreSQL, AWS, Docker, LangChain, Ollama</li>
+      <li>Deployed production applications to AWS (EC2, Elastic Beanstalk) with Docker containerization and CI/CD pipelines</li>
+      <li>Technologies: Node.js, React, TypeScript, Python, FastAPI, PostgreSQL, AWS, Amazon Bedrock, Docker, LangChain, Ollama</li>
     </ul>
 
     <!-- PhD Candidate - Bioinformatics -->
@@ -409,14 +410,27 @@
     
     <div class="project">
       <p class="project-title">GhEHR System - Electronic Health Records Platform</p>
-      <p class="tech-stack">Node.js · React · TypeScript · PostgreSQL · AWS · Docker</p>
+      <p class="tech-stack">Node.js · React · TypeScript · PostgreSQL · AWS · Docker · Live in Production</p>
       <p class="project-desc">
-        Comprehensive EHR system for Ghana healthcare facilities featuring AI-powered clinical notes generation, 
-        offline-first architecture, patient management, appointment scheduling, and real-time disease detection 
-        algorithms. Deployed to AWS with Docker containerization.
+        Offline-first EHR system for Ghana healthcare facilities featuring OPD/IPD workflows, NHIS insurance
+        claims, billing, 11-role RBAC with audit logging, and PWA-based offline sync so care teams keep working
+        through unreliable connectivity.
       </p>
-      <p class="tech-stack">🔗 <a href="http://ghehr-production-v2.eba-nymf88yi.us-east-1.elasticbeanstalk.com">Live Demo</a> | 
+      <p class="tech-stack">🔗 <a href="https://ghehrhealth.com">Live Demo</a> |
         <a href="https://github.com/Deen-Hayatu/ghehr-system">GitHub</a></p>
+    </div>
+
+    <div class="project">
+      <p class="project-title">MedPal - AI Clinical Decision Support</p>
+      <p class="tech-stack">Python · FastAPI · RAG · Amazon Bedrock · React · Live in Production</p>
+      <p class="project-desc">
+        AI clinical decision support grounded in the Ghana Standard Treatment Guidelines. A retrieval-augmented
+        pipeline returns cited differentials and treatment guidance, with a deterministic safety layer that
+        force-escalates emergencies regardless of model output, and server-side PHI de-identification before any
+        note reaches a cloud LLM.
+      </p>
+      <p class="tech-stack">🔗 <a href="https://medpal.ghehrhealth.com">Live Demo</a> |
+        <a href="https://github.com/Deen-Hayatu/MedPal">GitHub</a></p>
     </div>
 
     <div class="project">
