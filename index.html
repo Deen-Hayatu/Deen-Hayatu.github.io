@@ -7,9 +7,9 @@
   <!-- Primary Meta Tags -->
   <title>Mohammad Deen Hayatu | Software Engineer & AI Developer | Healthcare & AgriTech Solutions</title>
   <meta name="title" content="Mohammad Deen Hayatu | Software Engineer & AI Developer" />
-  <meta name="description" content="Software engineer specializing in full-stack development, AI/RAG systems, and cloud infrastructure. Building healthcare platforms, agricultural technology, and AI-powered tools for West Africa. Expert in React, Node.js, Python, AWS, and LangChain." />
+  <meta name="description" content="Software engineer specializing in full-stack development, AI/RAG systems, and cloud infrastructure. Building GhEHR (a live offline-first electronic health record system) and MedPal (live AI clinical decision support grounded in the Ghana Standard Treatment Guidelines), plus agricultural technology, for West Africa. Expert in React, Node.js, Python, AWS, and LangChain." />
   <meta name="author" content="Mohammad Deen Hayatu" />
-  <meta name="keywords" content="software engineer, full-stack developer, AI engineer, RAG systems, healthcare technology, agricultural technology, Node.js, React, Python, AWS, LangChain, Ollama, machine learning, bioinformatics, Ghana, West Africa, Haydeen Technologies, GhEHR, AgriConnect" />
+  <meta name="keywords" content="software engineer, full-stack developer, AI engineer, RAG systems, healthcare technology, agricultural technology, Node.js, React, Python, AWS, LangChain, Ollama, machine learning, bioinformatics, Ghana, West Africa, Haydeen Technologies, GhEHR, MedPal, Amazon Bedrock, clinical decision support, AgriConnect" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://deen-hayatu.github.io/" />
   
@@ -42,10 +42,10 @@
   <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
 
   <!-- Tailwind -->
-  <script>
-    tailwind = { darkMode: 'class' }
-  </script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
 
   <!-- Components - preload critical CSS -->
   <link rel="preload" href="assets/css/components.css" as="style" />
@@ -127,10 +127,18 @@
       {
         "@type": "SoftwareApplication",
         "name": "GhEHR System",
-        "description": "Comprehensive Electronic Health Records system for Ghana healthcare facilities with AI-powered clinical notes",
+        "description": "Offline-first Electronic Health Records system for Ghana healthcare facilities, live in production",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "Web",
-        "url": "https://github.com/Deen-Hayatu/ghehr-system"
+        "url": "https://ghehrhealth.com"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MedPal",
+        "description": "AI clinical decision support grounded in the Ghana Standard Treatment Guidelines, live in production",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "url": "https://medpal.ghehrhealth.com"
       },
       {
         "@type": "SoftwareApplication",
@@ -164,6 +172,7 @@
     <div class="nav-links desktop-nav">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#case-studies">Case Studies</a>
       <a href="#skills">Skills</a>
       <a href="blog/index.html">Blog</a>
       <a href="#contact">Contact</a>
@@ -190,6 +199,7 @@
   <div id="mobileMenu" class="mobile-nav hidden">
     <a href="#about" class="mobile-nav-link">About</a>
     <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#case-studies" class="mobile-nav-link">Case Studies</a>
     <a href="#skills" class="mobile-nav-link">Skills</a>
     <a href="blog/index.html" class="mobile-nav-link">Blog</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
@@ -363,17 +373,37 @@
       <!-- GhEHR System -->
       <div class="card">
         <h3 class="card-title">GhEHR System</h3>
-        <p class="card-meta">Node.js · React · TypeScript · AWS</p>
+        <p class="card-meta">Node.js · React · TypeScript · AWS · Live in Production</p>
         <p class="card-text">
-          Comprehensive Electronic Health Records system for Ghana healthcare facilities 
-          with AI-powered clinical notes, offline capabilities, and real-time disease detection 
-          for malaria, typhoid, TB, and other common conditions.
+          Offline-first Electronic Health Records system for Ghana healthcare facilities —
+          OPD/IPD workflows, NHIS insurance claims, billing, 11-role RBAC with audit logging,
+          and PWA-based offline sync so care teams keep working through unreliable connectivity.
         </p>
         <div class="mt-4 flex gap-3">
           <a href="https://github.com/Deen-Hayatu/ghehr-system" target="_blank" rel="noopener noreferrer" class="link">
             View on GitHub →
           </a>
-          <a href="http://ghehr-production-v2.eba-nymf88yi.us-east-1.elasticbeanstalk.com" target="_blank" rel="noopener noreferrer" class="link">
+          <a href="https://ghehrhealth.com" target="_blank" rel="noopener noreferrer" class="link">
+            Live Demo →
+          </a>
+        </div>
+      </div>
+
+      <!-- MedPal -->
+      <div class="card">
+        <h3 class="card-title">MedPal</h3>
+        <p class="card-meta">Python · FastAPI · RAG · Amazon Bedrock · Live in Production</p>
+        <p class="card-text">
+          AI clinical decision support grounded in the Ghana Standard Treatment Guidelines —
+          a retrieval-augmented pipeline returning cited differentials and treatment guidance,
+          with a deterministic safety layer that force-escalates emergencies regardless of what
+          the model says, and server-side PHI de-identification before any note reaches a cloud LLM.
+        </p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://github.com/Deen-Hayatu/MedPal" target="_blank" rel="noopener noreferrer" class="link">
+            View on GitHub →
+          </a>
+          <a href="https://medpal.ghehrhealth.com" target="_blank" rel="noopener noreferrer" class="link">
             Live Demo →
           </a>
         </div>
@@ -470,6 +500,46 @@
       >
         View All Projects on GitHub →
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies" class="section bg-white dark:bg-gray-900">
+  <div class="container">
+    <h2 class="section-title">Case Studies</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card">
+        <h3 class="card-title">Keeping a Growing System as One Architecture Quantum</h3>
+        <p class="card-text">
+          As GhEHR's backend grew past 130 service files, I tested it against the architecture
+          quantum / connascence framework from <em>Fundamentals of Software Architecture</em>
+          rather than defaulting to a microservices rewrite. The verdict: GhEHR earns staying a
+          modular monolith. I formalized 13 domain boundaries with a shared kernel, wired a
+          lint:boundaries fitness function into CI on every merge request, and replaced a
+          synchronous discharge-billing call chain — where a transient fault could leave a patient
+          episode permanently unbilled — with a durable, DB-backed outbox that retries safely
+          across replicas. The same pass surfaced and fixed a live bug where outpatient visits
+          were silently failing to draft NHIS insurance claims.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Safety-First Clinical AI, Under a 12-Second Budget</h3>
+        <p class="card-text">
+          MedPal's RAG pipeline (semantic retrieval → cross-encoder rerank → LLM synthesis over
+          Amazon Bedrock) has to be both trustworthy and fast enough for point-of-care use. I
+          built the safety layer so emergency cases are force-blocked to "refer now" by
+          deterministic rules the model can't override, and added server-side PHI
+          de-identification so patient identifiers never reach the cloud model. When production
+          latency crept to 20–30 seconds, I traced it to a cold-start model-load tail and an
+          oversized retrieval pool, then shipped model prewarming, a tuned retrieval window, and
+          streaming progress events — bringing it to a consistent 10–11s, inside a p95 ≤12s
+          budget, without trading away the diagnostic accuracy the larger retrieval pool existed
+          to protect.
+        </p>
+      </div>
     </div>
   </div>
 </section>
